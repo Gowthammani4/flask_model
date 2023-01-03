@@ -1,25 +1,3 @@
-#import pandas as pd
-#import matplotlib.pyplot as plt
-#import numpy as np
-#from sklearn.linear_model import LinearRegression
-#from sklearn.metrics import r2_score
-#from sklearn.model_selection import train_test_split
-#from flask import Flask, flash, request, redirect, url_for, render_template
-
-
-#app = Flask(__name__)
-
-#@app.route('/')
-#def hello_karios():
-    
- #   return "hello world"
-
-#@app.route('/display/<filename>')
-#def display_image(filename):
- #   return redirect(url_for('static', filename=filename), code= 301)
-
-#if __name__ == '__main__':
- #   app.run()
 from flask import Flask,render_template,request,jsonify
 #import pickle
 import pandas as pd
@@ -60,7 +38,7 @@ def predictAPI():
     return str(yPrediction)
 
 if __name__ == '__main__':
-   app.run()
+   app.run(debug=False,host='0.0.0.0')
 
 
 
